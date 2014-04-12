@@ -1,3 +1,7 @@
+body{
+	background-color: #DEE1EA;
+}
+
 .action-btn{
 	/*float: right;*/
 	position: relative;
