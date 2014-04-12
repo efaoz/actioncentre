@@ -10,11 +10,11 @@ title: EFA Action Centre
 
 
    <div class="panel panel-default">
-	  <div class="panel-heading"><h3 href="{{ post.url }}">{{ post.title }}</h3></div>
+	  <div class="panel-heading"><h3><a href="{{ post.url }}{{ site.baseurl }}">{{ post.title }}</a></h3></div>
 	  <div class="panel-body">
 	    {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
 
-	    <a type="button" class="btn btn-primary btn-lg action-btn" href="{{ post.url }}">Take Action</a>
+	    <a type="button" class="btn btn-primary btn-lg action-btn" href="{{ post.url }}{{ site.baseurl }}">Take Action</a>
 	  </div>
 	</div>
 
