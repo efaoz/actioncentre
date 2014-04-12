@@ -7,7 +7,17 @@ title: EFA Action Centre
   <h1>Action Centre</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+
+   <div class="panel panel-default">
+	  <div class="panel-heading"><h3 href="{{ post.url }}">{{ post.title }}</h3></div>
+	  <div class="panel-body">
+	    Panel content
+	    <button type="button" class="btn btn-primary btn-lg action-btn">Take Action</button>
+	  </div>
+	</div>
+
+
     {% endfor %}
   </ul>
 </div>
