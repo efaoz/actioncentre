@@ -20,7 +20,7 @@ body {
     position: relative;
     top: 70px;
 }
-#home > h1 {
+#home > h1,h2 {
     text-align: center;
     color: white;
 }
@@ -34,4 +34,7 @@ body {
 }
 .post {
     background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 18px;
 }

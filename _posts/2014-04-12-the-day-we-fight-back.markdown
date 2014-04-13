@@ -5,6 +5,7 @@ date:   2014-04-12 13:20:09
 categories: jekyll update
 twitter_widget_id: 454903671159934976
 contact_form: true
+mail_chimp: true
 
 ---
 
