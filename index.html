@@ -7,7 +7,7 @@ mail_chimp: true
 <div id="home">
   <h1>EFA Action Centre</h1>
   <ul class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts  %}
 
 
    <div class="panel panel-default">
@@ -21,16 +21,9 @@ mail_chimp: true
 	  </div>
 	</div>
 
-
     {% endfor %}
   </ul>
 
-<ul class="pagination pagination-lg">
-  <li class="disabled"><a href="#">«</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">»</a></li>
-</ul>
+{% include paginator.html %}
 
 </div>
