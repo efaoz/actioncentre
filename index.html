@@ -6,7 +6,7 @@ twitter_tool: true
 ---
 
 <div id="home">
-  <h1>Action Centre</h1>
+  <h1>EFA Action Centre</h1>
   <ul class="posts">
     {% for post in site.posts %}
 
@@ -17,6 +17,7 @@ twitter_tool: true
 	    {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
 
 	    <br />
+
 	    <a type="button" class="btn btn-primary btn-lg action-btn" href="{{ site.baseurl }}{{ post.url }}">Take Action</a>
 	  </div>
 	</div>
@@ -24,4 +25,13 @@ twitter_tool: true
 
     {% endfor %}
   </ul>
+
+<ul class="pagination pagination-lg">
+  <li class="disabled"><a href="#">«</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">»</a></li>
+</ul>
+
 </div>
