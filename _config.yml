@@ -2,3 +2,4 @@ name: EFA Action Centre
 markdown: redcarpet
 pygments: true
 baseurl: /actioncentre
+permalink: /:title
