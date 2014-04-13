@@ -3,8 +3,7 @@ layout: post
 title:  "A test Post"
 date:   2014-04-12 13:20:09
 categories: jekyll update
-share_tool: true
-contact_form: true
+
 
 ---
 
