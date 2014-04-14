@@ -19,10 +19,10 @@
 
 <body>
 <div class="down sharecenter social-container" style="width: 248px">
-    <a data-count="0" href="https://twitter.com/home?status=Test" target="_blank" id="twitter" class="twitter-button social-count">
+    <a data-count="0" href="https://twitter.com/home?status= http://efaoz.github.io/actioncentre/" target="_blank" id="twitter" class="twitter-button social-count">
         <div id="stwit"></div>
     </a>
-    <a data-count="0" href="https://www.facebook.com/share.php?u=Test" id="facebook" target="_blank" class="social-count facebook-button">
+    <a data-count="0" href="https://www.facebook.com/share.php?u= http://efaoz.github.io/actioncentre/" id="facebook" target="_blank" class="social-count facebook-button">
         <div id="sfb"></div>
     </a>
     <a data-count="0" href="https://plus.google.com/share?url=Test" id="googleplus" target="_blank" class="social-count google-button">
@@ -35,7 +35,7 @@
 
 <script type="text/javascript">
 var locatio = window.location.href;
-$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url='+locatio, {
+$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre/', {
     success: function(res, err) {
         $.each(res, function(network, value) {
             $('#' + network).attr('data-count', value);
@@ -102,7 +102,7 @@ $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,goo
     width:54px;
     height:54px;
     background-color:black;
-    background-image:url('img/social-icons.png');
+    background-image:url('../img/social-icons.png');
 }
 #sfb {
     background-position:70% 0;

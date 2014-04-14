@@ -6,6 +6,8 @@ categories: jekyll update
 twitter_widget_id: 454903671159934976
 action_form: postcode
 mail_chimp: true
+share_message: this is a share message
+page_url: the-day-we-fight-back
 
 ---
 
