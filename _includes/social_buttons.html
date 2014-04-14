@@ -1,3 +1,4 @@
+<div style="clear:both;"></div>
 <div class="down sharecenter social-container" style="width: 248px">
     <a data-count="0" href="https://twitter.com/home?status={{page.share_message}} http://efaoz.github.io/actioncentre{{page.url}}" target="_blank" id="twitter" class="twitter-button social-count">
         <div id="stwit"></div>
@@ -9,19 +10,9 @@
         <div id="sgplus"></div>
     </a>
 </div>
+<div style="clear:both;"></div>
 
 
-
-<script type="text/javascript">
-var locatio = window.location.href;
-$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
-    success: function(res, err) {
-        $.each(res, function(network, value) {
-            $('#' + network).attr('data-count', value);
-        })
-    }
-})
-</script>
 
 
 
@@ -38,14 +29,14 @@ $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,goo
     content: attr(data-count);
     display: block;
     /*height: 44px;*/
-    left: -44px;
+    left: -0px;
     padding: 16px;
     position: absolute;
     text-align: center;
     text-shadow: 0 1px 0 #000000;
-    top: 0;
+    top: -59px;
     white-space: nowrap;
-    width: 40px;
+    width: 54px;
     z-index: 98;
 }
 .social-count:before {
@@ -62,19 +53,14 @@ $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,goo
     z-index: 99;
 }
 .social-container {
-    position: fixed;
-    left: 0px;
-    width: 300px;
-    padding: 100px;
-    margin: auto;
-    z-index: 999;
+    height: 100px;
+
 }
 .social-container a {
     float: left;
     margin:4px;
     width:54px;
-    margin:4px;
-    height:50px;
+    margin-top: 60px;
 }
 .social-container div {
     float: left;

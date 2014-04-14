@@ -17,7 +17,6 @@
 </head>
 
 <body>
-{% include social_buttons.html %}
 
     <div class="container">
 
@@ -47,6 +46,16 @@
         {% include footer.html %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var locatio = window.location.href;
+        $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
+            success: function(res, err) {
+                $.each(res, function(network, value) {
+                    $('#' + network).attr('data-count', value);
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -1,36 +1,30 @@
 ---
 layout: post
-title:  "#asdasdasd"
+title:  "Stop the NSA `Fake Fix` Bill"
 date:   2014-04-12 13:20:09
-categories: jekyll update
+categories: nsa bill
 twitter_widget_id: 454903671159934976
 action_form: postcode
 mail_chimp: true
 share_message: this is a share message
-page_url: the-day-we-fight-back
 
 ---
 
-You'll find this post in yourdit this post and re-build (or run with tch) to see your changes!
-To add new posts, simply add a file in thollows the convention: YYYY-MM-DD-name-of-post.ext.
+### The FISA Improvements Act of 2013 seeks to extend NSA surveillance.  
 
-Jekyll also offers powerful support for code snippets:
+<br />
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The FISA Improvements Act of 2013 is a new bill promoted by Senator Dianne Feinstein, Chair of the Senate Intelligence Committee, designed to bolster some of the worst NSA surveillance programs and grant new authority to the NSA to engage in surveillance.  
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Senator Feinstein is touting this proposal as a way to address the problems with uncontrolled NSA spying, but don’t be fooled: it’s a **fake fix. **
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+The Fake Fix is designed to:
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+* Authorize the NSA’s **practice of collecting phone records** of hundreds of millions of innocent Americans.
+* Authorize the NSA to engage in **bulk collection of Internet communication** records—an extremely invasive program the government tried in the past, but shut down because it was useless.
+
+**This bill isn’t designed to rein in the NSA spying programs.**
+
+It won’t end bulk data collection by the NSA, and it won’t stop unconstitutional surveillance on our communications. It offers fig-leaf transparency and oversight provisions while embracing NSA surveillance.
+
+The Fake Fix is already out of committee and the Senate could begin voting on it soon. Please act quickly to help us defeat this terrible bill. Send a letter to your members of Congress and tell them to oppose Senator Feinstein’s Fake Fix and support real reform to end mass surveillance.
