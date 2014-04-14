@@ -34,7 +34,8 @@
 
 
 <script type="text/javascript">
-$.ajax('http://d28jjwuneuxo3n.cloudfront.net/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre/', {
+var locatio = window.location.href;
+$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url='+locatio, {
     success: function(res, err) {
         $.each(res, function(network, value) {
             $('#' + network).attr('data-count', value);
@@ -87,6 +88,7 @@ $.ajax('http://d28jjwuneuxo3n.cloudfront.net/?networks=facebook,twitter,googlepl
     width: 300px;
     padding: 100px;
     margin: auto;
+    z-index: 999;
 }
 .social-container a {
     float: left;
