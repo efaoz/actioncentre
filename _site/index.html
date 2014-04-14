@@ -19,23 +19,23 @@
 
 <body>
 <div class="down sharecenter social-container" style="width: 248px">
-    <a data-count="0" href="https://twitter.com/home?status= http://efaoz.github.io/actioncentre/" target="_blank" id="twitter" class="twitter-button social-count">
+    <a data-count="0" href="https://twitter.com/home?status= http://efaoz.github.io/actioncentre/index.html" target="_blank" id="twitter" class="twitter-button social-count">
         <div id="stwit"></div>
     </a>
-    <a data-count="0" href="https://www.facebook.com/share.php?u= http://efaoz.github.io/actioncentre/" id="facebook" target="_blank" class="social-count facebook-button">
+    <a data-count="0" href="https://www.facebook.com/share.php?u= http://efaoz.github.io/actioncentre/index.html" id="facebook" target="_blank" class="social-count facebook-button">
         <div id="sfb"></div>
     </a>
-    <a data-count="0" href="https://plus.google.com/share?url=Test" id="googleplus" target="_blank" class="social-count google-button">
+    <a data-count="0" href="https://plus.google.com/share?url= http://efaoz.github.io/actioncentre/index.html" id="googleplus" target="_blank" class="social-count google-button">
         <div id="sgplus"></div>
     </a>
 </div>
 
 
 
-
+<h1>/index.html</h1>
 <script type="text/javascript">
 var locatio = window.location.href;
-$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre/', {
+$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre/index.html', {
     success: function(res, err) {
         $.each(res, function(network, value) {
             $('#' + network).attr('data-count', value);
@@ -280,30 +280,6 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
             <div class="col-md-4">
                 <div class="sidebar">
   
-
-<!-- postcode action form -->
-
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">Action Form</h3>
-    </div>
-    <div class="panel-body">
-        <h5>Enter your postcode...</h5>
-        <div class="form-group">
-            <!-- <label class="control-label">Input addons</label> -->
-            <div class="input-group">
-                <!-- <span class="input-group-addon">$</span> -->
-                <input class="form-control" type="text" placeholder="Postcode">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Go</button>
-                </span>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
 
 
 

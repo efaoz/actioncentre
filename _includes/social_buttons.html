@@ -1,21 +1,21 @@
 <div class="down sharecenter social-container" style="width: 248px">
-    <a data-count="0" href="https://twitter.com/home?status={{page.share_message}} http://efaoz.github.io/actioncentre/{{page.page_url}}" target="_blank" id="twitter" class="twitter-button social-count">
+    <a data-count="0" href="https://twitter.com/home?status={{page.share_message}} http://efaoz.github.io/actioncentre{{page.url}}" target="_blank" id="twitter" class="twitter-button social-count">
         <div id="stwit"></div>
     </a>
-    <a data-count="0" href="https://www.facebook.com/share.php?u={{page.share_message}} http://efaoz.github.io/actioncentre/{{page.page_url}}" id="facebook" target="_blank" class="social-count facebook-button">
+    <a data-count="0" href="https://www.facebook.com/share.php?u={{page.share_message}} http://efaoz.github.io/actioncentre{{page.url}}" id="facebook" target="_blank" class="social-count facebook-button">
         <div id="sfb"></div>
     </a>
-    <a data-count="0" href="https://plus.google.com/share?url=Test" id="googleplus" target="_blank" class="social-count google-button">
+    <a data-count="0" href="https://plus.google.com/share?url={{page.share_message}} http://efaoz.github.io/actioncentre{{page.url}}" id="googleplus" target="_blank" class="social-count google-button">
         <div id="sgplus"></div>
     </a>
 </div>
 
 
 
-
+<h1>{{page.url}}</h1>
 <script type="text/javascript">
 var locatio = window.location.href;
-$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre/{{page.page_url}}', {
+$.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
     success: function(res, err) {
         $.each(res, function(network, value) {
             $('#' + network).attr('data-count', value);
