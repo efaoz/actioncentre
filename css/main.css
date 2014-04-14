@@ -18,7 +18,6 @@ body {
 }
 .sidebar {
     position: relative;
-    top: 70px;
 }
 #home > h1, h2 {
     text-align: center;
