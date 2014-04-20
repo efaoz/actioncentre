@@ -31,10 +31,24 @@
 
     {% include footer.html %}
 
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!-- jekyll search -->
     <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
+    {% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <article>
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+      </h3>
+    </article>
+  {{/entries}}
+</script>
+{% endraw %}
+
 
     <script type="text/javascript">
   $(function() {
@@ -47,15 +61,6 @@
   });
 </script>
 <!-- end jekyll search -->
-    <script type="text/javascript">
-    var locatio = window.location.href;
-    $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
-        success: function(res, err) {
-            $.each(res, function(network, value) {
-                $('#' + network).attr('data-count', value);
-            })
-        }
-    })
-    </script>
+    
 </body>
 </html>
