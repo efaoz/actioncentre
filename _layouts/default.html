@@ -6,18 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-
     <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-
-
 </head>
-
 <body>
-
     <div class="container">
 
         {% include header.html %}
@@ -25,37 +20,42 @@
         <div class="row">
             <div class="col-md-8">
 
-
                 {{ content }}
-         
-
-
-
 
             </div>
             <div class="col-md-4">
                 {% include sidebar.html %}
             </div>
         </div>
-
-
-
-
     </div>
 
-        {% include footer.html %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% include footer.html %}
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- jekyll search -->
+    <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
     <script type="text/javascript">
-        var locatio = window.location.href;
-        $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
-            success: function(res, err) {
-                $.each(res, function(network, value) {
-                    $('#' + network).attr('data-count', value);
-                })
-            }
-        })
+  $(function() {
+    $('#search-query').lunrSearch({
+      indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+      results:  '#search-results',          // jQuery selector for the search results container
+      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+      template: '#search-results-template'  // jQuery selector for the Mustache.js template
+    });
+  });
+</script>
+<!-- end jekyll search -->
+    <script type="text/javascript">
+    var locatio = window.location.href;
+    $.ajax('http://social-button-server.herokuapp.com/?networks=facebook,twitter,googleplus&url=http://efaoz.github.io/actioncentre{{page.url}}', {
+        success: function(res, err) {
+            $.each(res, function(network, value) {
+                $('#' + network).attr('data-count', value);
+            })
+        }
+    })
     </script>
 </body>
-
 </html>

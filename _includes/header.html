@@ -1,10 +1,12 @@
 <div class="navbar navbar-default" style="margin-top: 20px;">
-  <div class="navbar-header">
-    
-    <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/img/logo.png"></a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <!-- <ul class="nav navbar-nav">
+    <div class="navbar-header">
+
+        <a href="{{ site.baseurl }}">
+            <img src="{{ site.baseurl }}/img/logo.png">
+        </a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <!-- <ul class="nav navbar-nav">
       <li class="active"><a href="#">Active</a></li>
       <li><a href="#">Link</a></li>
       <li class="dropdown">
@@ -20,20 +22,25 @@
         </ul>
       </li>
     </ul> -->
-    <ul class="nav navbar-nav navbar-right">
-    <div class="btn-group" style="margin-top: 15px; margin-right: 15px;">
-                  <button type="button" class="btn btn-success btn-lg">Donate To EFF</button>
-                  <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Why donate to EFF?</a></li>
-                    <li><a href="#">Pay one off</a></li>
-                    <li><a href="#">Donate monthly</a></li>
-                  </ul>
-                </div>
-    <!-- <form class="navbar-form navbar-left">
+        <ul class="nav navbar-nav navbar-right">
+            <div class="btn-group" style="margin-top: 15px; margin-right: 15px;">
+                <button type="button" class="btn btn-success btn-lg">Donate To EFF</button>
+                <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Why donate to EFF?</a>
+                    </li>
+                    <li><a href="#">Pay one off</a>
+                    </li>
+                    <li><a href="#">Donate monthly</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <form class="navbar-form navbar-left">
       <input class="form-control col-lg-8" placeholder="Search" type="text">
     </form> -->
-      <!-- <li><a href="#">Link</a></li>
+            <!-- <li><a href="#">Link</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -44,23 +51,29 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </li> -->
-    </ul>
-  </div>
+        </ul>
+    </div>
 </div>
 <div class="navbar navbar-inverse">
 
-  <div class="navbar-collapse collapse navbar-inverse-collapse">
-    <ul class="nav navbar-nav">
-      <li class=""><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-     
-    </ul>
-    <div class="nav navbar-nav navbar-right">
-      
-      <form class="navbar-form navbar-left">
-        <input type="text" class="form-control col-lg-8" placeholder="Search">
-      </form>
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav">
+            <li class=""><a href="#">Home</a>
+            </li>
+            <li><a href="#">About</a>
+            </li>
+            <li><a href="#">Contact</a>
+            </li>
+
+        </ul>
+        <div class="nav navbar-nav navbar-right">
+
+            <div id="search">
+                <form action="/search" method="get" class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" id="search-query" name="q" placeholder="Search" autocomplete="off">
+                </form>
+            </div>
+
+        </div>
     </div>
-  </div>
 </div>

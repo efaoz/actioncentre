@@ -4,3 +4,7 @@ pygments: true
 baseurl: /actioncentre
 permalink: /:title
 paginate: 3
+
+
+lunr_search:
+  min_length: 3
