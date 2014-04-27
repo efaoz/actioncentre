@@ -49,12 +49,16 @@ $(document).ready(function() {
              $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>');  
              }
 
+             if(data.legislators[i].facebook){
+             $('.legislators-div').append('<a href="'+data.legislators[i].facebook+'" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>');  
+             }
+
              if(data.legislators[i].contact_form){
              $('.legislators-div').append('<a href="'+data.legislators[i].contact_form+'" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>');  
              }
 
              if(data.legislators[i].electorate_office_phone){
-             $('.legislators-div').append('<a href="'+data.legislators[i].electorate_office_phone+'" target="_blank"><i class="fa fa-phone fa-2x"></i></a>');  
+             $('.legislators-div').append('<a><i class="fa fa-phone fa-2x"></i>'+data.legislators[i].electorate_office_phone+'</a>');  
              }
 
 
