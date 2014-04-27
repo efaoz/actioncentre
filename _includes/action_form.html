@@ -46,12 +46,17 @@ $(document).ready(function() {
              $('.legislators-div').append('<div class="contact-info" style="display:none;">');
             
              if(data.legislators[i].twitter){
-             $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"><i class="fa fa-twitter fa-2x"></i>Twitter</a>');  
+             $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>');  
              }
 
              if(data.legislators[i].contact_form){
-             $('.legislators-div').append('<a href="'+data.legislators[i].contact_form+'" target="_blank"><i class="fa fa-envelope fa-2x"></i>Email</a>');  
+             $('.legislators-div').append('<a href="'+data.legislators[i].contact_form+'" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>');  
              }
+
+             if(data.legislators[i].electorate_office_phone){
+             $('.legislators-div').append('<a href="'+data.legislators[i].electorate_office_phone+'" target="_blank"><i class="fa fa-phone fa-2x"></i></a>');  
+             }
+
 
              $('.legislators-div').append('</div>');
 
