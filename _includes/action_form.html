@@ -10,7 +10,7 @@
         <div class="input-group">
             <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
             <span class="input-group-btn">
-                <button id="postcode_go" class="btn btn-primary" type="submit">Go</button>
+                <button id="postcode_go" class="btn btn-primary" type="submit">Find your legislators</button>
             </span>
         </div>
 
@@ -35,14 +35,21 @@ $(document).ready(function() {
         var postcode = $('#postcode_input').val();
 
         $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode='+postcode, function(data) {
+
+             $('.legislators-div').append('<br />');
+
             for (var i = 0; i < data.legislators.length; i++) {
 
              $('.legislators-div').append('<img class="legislator-img" src="'+data.legislators[i].img_url+'">');   
              $('.legislators-div').append('<p>'+data.legislators[i].name+'</p>');   
+
+             $('.legislators-div').append('<div class="contact-info" style="display:none;">');
              $('.legislators-div').append('<a href="'+data.legislators[i].legislator_page+'" target="_blank">legislator page</a>');  
              if(data.legislators[i].twitter){
                  $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"> | Twitter</a>');
              }
+             $('.legislators-div').append('</div>');
+
              $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
              $('.legislators-div').append('<br />');
              $('.legislators-div').append('<br />');
