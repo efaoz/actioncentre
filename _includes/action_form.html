@@ -40,7 +40,9 @@ $(document).ready(function() {
 
              $('.legislators-div').append('<br />');
 
-            for (var i = 0; i < data.legislators.length; i++) {
+
+            for (var i = data.legislators.length - 1; i >= 0; i--) {  //reverse order so members appear first
+            // for (var i = 0; i < data.legislators.length; i++) {
 
              $('.legislators-div').append('<img class="legislator-img" src="'+data.legislators[i].img_url+'">');   
              $('.legislators-div').append('<h5 class="legislator-title">'+data.legislators[i].name+'</h5>');   
