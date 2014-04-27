@@ -10,10 +10,13 @@
             <!-- <label class="control-label">Input addons</label> -->
             <div class="input-group">
                 <!-- <span class="input-group-addon">$</span> -->
-                <input class="form-control" type="text" placeholder="Postcode">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Go</button>
-                </span>
+                <form name="input" action="/legislators" method="get">
+
+                    <input class="form-control" type="text" placeholder="Postcode">
+                    <span class="input-group-btn">
+                        <input class="btn btn-primary" type="submit" value="Go">
+                    </span>
+                </form>
             </div>
         </div>
 
