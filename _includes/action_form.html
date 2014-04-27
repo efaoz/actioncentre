@@ -34,14 +34,34 @@ $(document).ready(function() {
 
         var postcode = $('#postcode_input').val();
 
-        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode=' + postcode, function(data) {
+        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode='+postcode, function(data) {
             for (var i = 0; i < data.legislators.length; i++) {
-             $('.legislators-div').append('<img src="'+data.legislators[i].img_url+'">');   
+
+             $('.legislators-div').append('<img class="legislator-img" src="'+data.legislators[i].img_url+'">');   
              $('.legislators-div').append('<p>'+data.legislators[i].name+'</p>');   
+             $('.legislators-div').append('<a href="'+data.legislators[i].legislator_page+'" target="_blank">legislator page</a>');  
+             if(data.legislators[i].twitter){
+                 $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"> | Twitter</a>');
+             }
+             $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
+             $('.legislators-div').append('<br />');
+             $('.legislators-div').append('<br />');
+             $('.legislators-div').append('<br />');
             // alert(data.legislators[i].name);
             };
         });
     });
 });
 </script>
+
+<style type="text/css">
+    .legislator-img{
+        float: left;
+        height:auto;
+        width:50px;
+    }
+    .contact-btn{
+        float: right;
+    }
+</style>
 {% endif %}
