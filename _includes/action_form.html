@@ -44,13 +44,18 @@ $(document).ready(function() {
              $('.legislators-div').append('<p>'+data.legislators[i].name+'</p>');   
 
              $('.legislators-div').append('<div class="contact-info" style="display:none;">');
-             $('.legislators-div').append('<a href="'+data.legislators[i].legislator_page+'" target="_blank">legislator page</a>');  
+            
              if(data.legislators[i].twitter){
-                 $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"> | Twitter</a>');
+             $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"><i class="fa fa-twitter fa-2x"></i>Twitter</a>');  
              }
+
+             if(data.legislators[i].contact_form){
+             $('.legislators-div').append('<a href="'+data.legislators[i].contact_form+'" target="_blank"><i class="fa fa-envelope fa-2x"></i>Email</a>');  
+             }
+
              $('.legislators-div').append('</div>');
 
-             $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
+             // $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
              $('.legislators-div').append('<br />');
              $('.legislators-div').append('<br />');
              $('.legislators-div').append('<br />');
