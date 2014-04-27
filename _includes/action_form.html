@@ -8,10 +8,12 @@
         <h5>Enter your postcode...</h5>
 
         <div class="input-group">
+        <form id="find_form">
             <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
             <span class="input-group-btn">
-                <button id="postcode_go" class="btn btn-primary" type="submit">Find your legislators</button>
+                 <input id="postcode_go" type="submit" class="btn btn-primary" value="Find your legislators">
             </span>
+        </form>    
         </div>
 
 
@@ -29,7 +31,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-    $('#postcode_go').click(function() {
+    $('#find_form').submit(function(event) {
         $('.legislators-div').empty();
 
         var postcode = $('#postcode_input').val();
