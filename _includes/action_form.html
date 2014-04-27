@@ -6,19 +6,19 @@
     </div>
     <div class="panel-body">
         <h5>Enter your postcode...</h5>
-        <div class="form-group">
-            <!-- <label class="control-label">Input addons</label> -->
-            <div class="input-group">
-                <!-- <span class="input-group-addon">$</span> -->
-                
 
-                    <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
-                    <span class="input-group-btn">
-                        <button id="postcode_go" class="btn btn-primary" type="submit" >Go</button>
-                    </span>
-                
-            </div>
+        <div class="input-group">
+            <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
+            <span class="input-group-btn">
+                <button id="postcode_go" class="btn btn-primary" type="submit">Go</button>
+            </span>
         </div>
+
+
+        <div class="legislators-div">
+            <h4>legislators</h4>
+        </div>
+
 
     </div>
 </div>
@@ -33,8 +33,12 @@ $(document).ready(function() {
 
         var postcode = $('#postcode_input').val();
 
-        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode='+postcode, function(data){
-            alert(data);
+        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode=' + postcode, function(data) {
+
+            for (var i = 0; i < data.legislators.length; i++) {
+                
+            alert(data.legislators[i].name);
+            };
         });
     });
 });
