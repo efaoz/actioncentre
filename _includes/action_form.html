@@ -16,7 +16,7 @@
 
 
         <div class="legislators-div">
-            <h4>legislators</h4>
+            <!-- <h4>legislators</h4> -->
         </div>
 
 
@@ -30,14 +30,15 @@
 $(document).ready(function() {
 
     $('#postcode_go').click(function() {
+        $('.legislators-div').empty();
 
         var postcode = $('#postcode_input').val();
 
         $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode=' + postcode, function(data) {
-
             for (var i = 0; i < data.legislators.length; i++) {
-                
-            alert(data.legislators[i].name);
+             $('.legislators-div').append('<img src="'+data.legislators[i].img_url+'">');   
+             $('.legislators-div').append('<p>'+data.legislators[i].name+'</p>');   
+            // alert(data.legislators[i].name);
             };
         });
     });
