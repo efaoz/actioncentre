@@ -7,14 +7,14 @@
     <div class="panel-body">
         <h5>Enter your postcode...</h5>
 
-        <div class="input-group">
-        <form id="find_form" >
-            <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
-            <span class="input-group-btn">
-                 <input id="postcode_go" type="submit" class="btn btn-primary" value="Find your legislators">
-            </span>
-        </form>    
-        </div>
+        <form id="find_form">
+            <div class="input-group">
+                <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
+                <span class="input-group-btn">
+                    <input id="postcode_go" type="submit" class="btn btn-primary" value="Find your legislators">
+                </span>
+            </div>
+        </form>
 
 
         <div class="legislators-div">
@@ -36,62 +36,63 @@ $(document).ready(function() {
 
         var postcode = $('#postcode_input').val();
         // alert(postcode);
-        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode='+postcode, function(data) {
+        $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode=' + postcode, function(data) {
 
-             $('.legislators-div').append('<br />');
+            $('.legislators-div').append('<br />');
 
 
-            for (var i = data.legislators.length - 1; i >= 0; i--) {  //reverse order so members appear first
-            // for (var i = 0; i < data.legislators.length; i++) {
+            for (var i = data.legislators.length - 1; i >= 0; i--) { //reverse order so members appear first
+                // for (var i = 0; i < data.legislators.length; i++) {
 
-             $('.legislators-div').append('<img class="legislator-img" src="'+data.legislators[i].img_url+'">');   
-             $('.legislators-div').append('<h5 class="legislator-title">'+data.legislators[i].name+'</h5>');   
+                $('.legislators-div').append('<img class="legislator-img" src="' + data.legislators[i].img_url + '">');
+                $('.legislators-div').append('<h5 class="legislator-title">' + data.legislators[i].name + '</h5>');
 
-            
-            
-             if(data.legislators[i].twitter){
-             $('.legislators-div').append('<a href="'+data.legislators[i].twitter+'" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>');  
-             }
 
-             if(data.legislators[i].facebook){
-             $('.legislators-div').append('<a href="'+data.legislators[i].facebook+'" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>');  
-             }
 
-             if(data.legislators[i].contact_form){
-             $('.legislators-div').append('<a href="'+data.legislators[i].contact_form+'" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>');  
-             }
+                if (data.legislators[i].twitter) {
+                    $('.legislators-div').append('<a href="' + data.legislators[i].twitter + '" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>');
+                }
 
-             if(data.legislators[i].electorate_office_phone){
-             $('.legislators-div').append('<a><i class="fa fa-phone fa-2x"></i>' +data.legislators[i].electorate_office_phone+'</a>');  
-             }
+                if (data.legislators[i].facebook) {
+                    $('.legislators-div').append('<a href="' + data.legislators[i].facebook + '" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>');
+                }
 
-             // $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
-             $('.legislators-div').append('<br />');
-             $('.legislators-div').append('<br />');
-            // alert(data.legislators[i].name);
+                if (data.legislators[i].contact_form) {
+                    $('.legislators-div').append('<a href="' + data.legislators[i].contact_form + '" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>');
+                }
+
+                if (data.legislators[i].electorate_office_phone) {
+                    $('.legislators-div').append('<a><i class="fa fa-phone fa-2x"></i>' + data.legislators[i].electorate_office_phone + '</a>');
+                }
+
+                // $('.legislators-div').append('<button type="button" class="btn btn-success contact-btn">Contact</button>');
+                $('.legislators-div').append('<br />');
+                $('.legislators-div').append('<br />');
+                // alert(data.legislators[i].name);
             };
         });
-            return false;
+        return false;
     });
 });
 </script>
 
 <style type="text/css">
-    .legislator-img{
-        float: left;
-        height:auto;
-        width:50px;
-    }
-    .legislator-title{
-        position: relative;
-        left: 10px;
-    }
-    .contact-btn{
-        float: right;
-    }
-    .fa{
-        position: relative;
-        margin-left: 10px;
-    }
+.legislator-img {
+    float: left;
+    height:auto;
+    width:50px;
+}
+.legislator-title {
+    position: relative;
+    left: 10px;
+}
+.contact-btn {
+    float: right;
+}
+.fa {
+    position: relative;
+    margin-left: 10px;
+}
+
 </style>
 {% endif %}
