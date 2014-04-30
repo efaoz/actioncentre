@@ -8,7 +8,7 @@
         <h5>Enter your postcode...</h5>
 
         <div class="input-group">
-        <form id="find_form">
+        <form id="find_form" >
             <input id="postcode_input" class="form-control" type="text" placeholder="Postcode">
             <span class="input-group-btn">
                  <input id="postcode_go" type="submit" class="btn btn-primary" value="Find your legislators">
@@ -35,7 +35,7 @@ $(document).ready(function() {
         $('.legislators-div').empty();
 
         var postcode = $('#postcode_input').val();
-
+        // alert(postcode);
         $.getJSON('http://legislators-api.herokuapp.com/legislators?postcode='+postcode, function(data) {
 
              $('.legislators-div').append('<br />');
@@ -71,6 +71,7 @@ $(document).ready(function() {
             // alert(data.legislators[i].name);
             };
         });
+            return false;
     });
 });
 </script>
